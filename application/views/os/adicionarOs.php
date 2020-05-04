@@ -85,7 +85,12 @@
                                         <label for="descricaoProduto">
                                             <h4>Descrição Produto/Serviço</h4>
                                         </label>
-                                        <textarea class="span12 editor" name="descricaoProduto" id="descricaoProduto" cols="30" rows="5"></textarea>
+                                        <textarea class="span12 editor" name="descricaoProduto" id="descricaoProduto" cols="30" rows="5">
+                                            Venda, Instalação, Manutenção, Reparo?<BR>
+                                            Descreva o(s) Equipamento(s) e/ou Peça(s).<BR>
+                                            Qual o Modelo/Número de Série?<BR>
+                                            Equipamento Completo ou Falta algum item? Acrescente na ABA DE DEFEITOS!<BR>
+                                        </textarea>
                                     </div>
                                     <div class="span6" style="padding: 1%; margin-left: 0">
                                         <label for="defeito">

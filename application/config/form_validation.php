@@ -10,47 +10,52 @@ array('clientes' => array(array(
     array(
         'field' => 'documento',
         'label' => 'CPF/CNPJ',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
     ),
     array(
         'field' => 'telefone',
         'label' => 'Telefone',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
+    ),
+    array(
+        'field' => 'celular',
+        'label' => 'Celular',
+        'rules' => 'trim',
     ),
     array(
         'field' => 'email',
         'label' => 'Email',
-        'rules' => 'required|trim|valid_email',
+        'rules' => 'trim|valid_email',
     ),
     array(
         'field' => 'rua',
         'label' => 'Rua',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
     ),
     array(
         'field' => 'numero',
         'label' => 'Número',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
     ),
     array(
         'field' => 'bairro',
         'label' => 'Bairro',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
     ),
     array(
         'field' => 'cidade',
         'label' => 'Cidade',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
     ),
     array(
         'field' => 'estado',
         'label' => 'Estado',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
     ),
     array(
         'field' => 'cep',
         'label' => 'CEP',
-        'rules' => 'required|trim',
+        'rules' => 'trim',
     ))
     ,
     'servicos' => array(array(

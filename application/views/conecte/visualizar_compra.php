@@ -27,7 +27,7 @@
                                 } else { ?>
 
                                     <tr>
-                                        <td style="width: 25%"><img src=" <?php echo $emitente[0]->url_logo; ?> "></td>
+                                        <td style="width: 25%; vertical-align: middle;"><img src=" <?php echo $emitente[0]->url_logo; ?> "></td>
                                         <td> <span style="font-size: 20px; ">
                                                 <?php echo $emitente[0]->nome; ?></span> </br><span>
                                                 <?php echo $emitente[0]->cnpj; ?> </br>

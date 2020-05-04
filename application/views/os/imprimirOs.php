@@ -35,7 +35,7 @@ $totalProdutos = 0; ?>
                                     <tr>
                                         <td colspan="3" class="alert">Você precisa configurar os dados do emitente. >>><a href="<?php echo base_url(); ?>index.php/mapos/emitente">Configurar</a>
                                             <<<</td> </tr> <?php } else { ?> <tr>
-                                        <td style="width: 25%"><img src=" <?php echo $emitente[0]->url_logo; ?> " style="max-height: 100px"></td>
+                                        <td style="width: 25%; vertical-align: middle;"><img src=" <?php echo $emitente[0]->url_logo; ?> " style="max-height: 100px"></td>
                                         <td> <span style="font-size: 20px; "> <?php echo $emitente[0]->nome; ?></span> </br><span><?php echo $emitente[0]->cnpj; ?> </br> <?php echo $emitente[0]->rua . ', ' . $emitente[0]->numero . ' - ' . $emitente[0]->bairro . ' - ' . $emitente[0]->cidade . ' - ' . $emitente[0]->uf; ?> </span> </br> <span> E-mail: <?php echo $emitente[0]->email . ' - Fone: ' . $emitente[0]->telefone; ?></span></td>
                                         <td style="width: 18%; text-align: center"><b>N° OS:</b> <span><?php echo $result->idOs ?></span></br> </br> <span>Emissão: <?php echo date('d/m/Y') ?></span></td>
                                     </tr>
@@ -240,7 +240,46 @@ $totalProdutos = 0; ?>
                         }
 
                         ?>
-
+                        <div>
+                            <table class=""> 
+                                <tbody> 
+                                    <tr> 
+                                        <td style="width: 50%; padding-left: 0"> 
+                                            <ul> 
+                                                <li> 
+                                                    <span> 
+                                                        <h5 class="">
+                                                            <b>CONDIÇÕES GERAIS</b>
+                                                        </h5> 
+                                                    </span> 
+                                                </li> 
+                                            </ul> 
+                                        </td> 
+                                    </tr> 
+                                </tbody> 
+                            </table>
+                            <table class="table"> 
+                                <tbody> 
+                                    <tr> 
+                                        <td style="width: 100%; padding-left: 0"> 
+                                            <ul> 
+                                                <li> 
+                                                    <span style="font-size: 10px;line-height: 9px;">
+                                                        <p style="margin: 0 0 5px;">1 - A empresa da garantia de 30 dias para mão de obra e peças usadas no concerto, contados a partir da data de entrega.</p>
+                                                        <p style="margin: 0 0 5px;">2 - A Garantia não cobre mau-uso e peças que não foram trocadas.</p>
+                                                        <p style="margin: 0 0 5px;">3 - É indispensável a apresentação deste protocolo para retirada do material.</p>
+                                                        <p style="margin: 0 0 5px;">4 - Aparelhos não retirados no prazo máximo de 30 dias contados a partir da comunicação para sua retirada sofrerão acréscimos das despesas de armazenamento e seguro.</p>
+                                                        <p style="margin: 0 0 5px;">5 - Aparelhos não retirados no prazo máximo de 90 dias contatos a partir da comunicação para sua retirada serão considerados abandonados e poderão ser vendidos ou descartados no lixo tecnológico, a critério da empresa.</p>
+                                                        <p style="margin: 0 0 5px;">6 - O orçamento não autorizado deve ser comunicado com antecedência para evitar que o cliente tenha que aguardar a sua montagem para devolução.&nbsp;</p>
+                                                        <br>
+                                                    </span>
+                                                </li> 
+                                            </ul> 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <table class="table table-bordered table-condensed">
                             <tbody>
                                 <tr>
