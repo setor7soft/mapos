@@ -4,6 +4,21 @@ Todas as alterações serão documentadas neste arquivo
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 e [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.8.1] - 2020-05-23
+
+## Changed
+- Melhoria em mensagem de erro pasta faltante system. [@RamonSilva20](https://github.com/RamonSilva20)
+- Melhoria em consultas de relatório (order_by e data inicial e data final). [@Pr3d4dor](https://github.com/Pr3d4dor)
+
+## [4.8.0] - 2020-05-18
+
+## Fixed
+- Correção de alguns erros de escrita em form_validation. [@willph](https://github.com/willph)
+
+## Changed
+- Liberado todos os modos de pagamento em mercado pago. [@willph](https://github.com/willph)
+- Melhoria em impressão de OS em impressora térmica. [@willph](https://github.com/willph)
+
 ## [4.7.5] - 2020-05-11
 
 ## Fixed
