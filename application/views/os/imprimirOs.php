@@ -112,20 +112,7 @@ $totalProdutos = 0; ?>
                                                 <?php if ($result->status == 'Finalizado') { ?>
                                                     VENC. DA GARANTIA:
                                             </b>
-                                            <?php
-                                                    $data = date('d/m/Y', strtotime($result->dataFinal));
-
-                                                    // Criar o objeto representando a data
-                                                    $obj_data = DateTime::createFromFormat('d/m/Y', $data);
-                                                    $obj_data->setTime(0, 0, 0);
-
-                                                    // Realizar a soma de dias
-                                                    $intervalo = new DateInterval('P' . $result->garantia . 'D');
-                                                    $obj_data->add($intervalo);
-
-                                                    // Formatar a data obtida
-                                                    echo $obj_data->format('d/m/Y'); ?><?php } ?>
-
+                                            <?php echo dateInterval($result->dataFinal, $result->garantia); ?><?php } ?>
                                     </tr>
                                 <?php } ?>
 
@@ -182,7 +169,6 @@ $totalProdutos = 0; ?>
                                     <?php
 
                                     foreach ($produtos as $p) {
-
                                         $totalProdutos = $totalProdutos + $p->subTotal;
                                         echo '<tr>';
                                         echo '<td>' . $p->descricao . '</td>';
@@ -239,7 +225,6 @@ $totalProdutos = 0; ?>
                             echo "<h4 style='text-align: right'>Valor Total: R$" . number_format($totalProdutos + $totalServico, 2, ',', '.') . "</h4>";
                         }
 
-                        ?>
                         <div>
                             <table class=""> 
                                 <tbody> 
@@ -280,6 +265,7 @@ $totalProdutos = 0; ?>
                                 </tbody>
                             </table>
                         </div>
+
                         <table class="table table-bordered table-condensed">
                             <tbody>
                                 <tr>

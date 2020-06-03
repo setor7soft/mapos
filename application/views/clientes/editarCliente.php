@@ -13,9 +13,17 @@
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
-                    echo '<div class="alert alert-danger">' . $custom_error . '</div>';
-                } ?>
+    echo '<div class="alert alert-danger">' . $custom_error . '</div>';
+} ?>
                 <form action="<?php echo current_url(); ?>" id="formCliente" method="post" class="form-horizontal">
+
+                  <div class="control-group">
+                      <label for="documento" class="control-label">CPF/CNPJ<span class="required">*</span></label>
+                      <div class="controls">
+                          <input id="documento" class="cpfcnpj" type="text" name="documento" value="<?php echo $result->documento; ?>" />
+                          <button id="buscar_info_cnpj" class="btn btn-xs" type="button">Buscar Informações (CNPJ)</button>
+                      </div>
+                  </div>
                     <div class="control-group">
                         <?php echo form_hidden('idClientes', $result->idClientes) ?>
                         <label for="nomeCliente" class="control-label">Nome</label>
@@ -23,70 +31,70 @@
                             <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo $result->nomeCliente; ?>" />
                         </div>
                     </div>
-                    <div class="control-group">
                         <label for="documento" class="control-label">CPF/CNPJ</label>
+                        <label for="contato" class="control-label">Contato:<span class="required">*</span></label>
                         <div class="controls">
-                            <input class="cpfcnpj" type="text" name="documento" value="<?php echo $result->documento; ?>" />
+                            <input class="nomeCliente" type="text" name="contato" value="<?php echo $result->contato; ?>" />
                         </div>
                     </div>
-                    <div class="control-group">
                         <label for="telefone" class="control-label">Telefone</label>
+                        <label for="telefone" class="control-label">Telefone<span class="required">*</span></label>
                         <div class="controls">
                             <input id="telefone" type="text" name="telefone" value="<?php echo $result->telefone; ?>" />
                         </div>
-                    </div>
-
-                    <div class="control-group">
                         <label for="celular" class="control-label">Celular<span class="required">*</span></label>
+                    <div class="control-group">
+                        <label for="celular" class="control-label">Celular</label>
                         <div class="controls">
                             <input id="celular" type="text" name="celular" value="<?php echo $result->celular; ?>" />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
                         <label for="email" class="control-label">Email</label>
+                    </div>
+                    <div class="control-group">
+                        <label for="email" class="control-label">Email<span class="required">*</span></label>
                         <div class="controls">
-                            <input id="email" type="text" name="email" value="<?php echo $result->email; ?>" />
+                        <label for="cep" class="control-label">CEP</label>
                         </div>
                     </div>
-
                     <div class="control-group" class="control-label">
-                        <label for="cep" class="control-label">CEP</label>
-                        <div class="controls">
+                        <label for="cep" class="control-label">CEP<span class="required">*</span></label>
+                        <label for="rua" class="control-label">Rua</label>
                             <input id="cep" type="text" name="cep" value="<?php echo $result->cep; ?>" />
                         </div>
                     </div>
-
-                    <div class="control-group">
-                        <label for="numero" class="control-label">Número</label>
-                        <div class="controls">
-                            <input id="numero" type="text" name="numero" value="<?php echo $result->numero; ?>" />
-                        </div>
-                    </div>
-
                     <div class="control-group" class="control-label">
                         <label for="rua" class="control-label">Rua</label>
                         <div class="controls">
                             <input id="rua" type="text" name="rua" value="<?php echo $result->rua; ?>" />
                         </div>
                     </div>
-
-                    <div class="control-group" class="control-label">
+                    <div class="control-group">
+                        <label for="numero" class="control-label">Número</label>
+                        <div class="controls">
+                            <input id="numero" type="text" name="numero" value="<?php echo $result->numero; ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <label for="bairro" class="control-label">Bairro</label>
+                        <div class="controls">
+                            <input id="complemento" type="text" name="complemento" value="<?php echo $result->complemento; ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group" class="control-label">
+                        <label for="cidade" class="control-label">Cidade</label>
                         <div class="controls">
                             <input id="bairro" type="text" name="bairro" value="<?php echo $result->bairro; ?>" />
                         </div>
                     </div>
 
-                    <div class="control-group" class="control-label">
-                        <label for="cidade" class="control-label">Cidade</label>
+                        <label for="estado" class="control-label">Estado</label>
+                        <label for="cidade" class="control-label">Cidade<span class="required">*</span></label>
                         <div class="controls">
                             <input id="cidade" type="text" name="cidade" value="<?php echo $result->cidade; ?>" />
                         </div>
                     </div>
 
                     <div class="control-group" class="control-label">
-                        <label for="estado" class="control-label">Estado</label>
+                        <label for="estado" class="control-label">Estado<span class="required">*</span></label>
                         <div class="controls">
                             <input id="estado" type="text" name="estado" value="<?php echo $result->estado; ?>" />
                         </div>
@@ -108,43 +116,43 @@
 
 
 
-<script src="<?php echo base_url() ?>assets/js/jquery.validate.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#formCliente').validate({
-            rules: {
-                nomeCliente: {
-                    required: true
-                },
-                documento: {
                     required: false
-                },
-                telefone: {
+<script type="text/javascript">
                     required: false
                 },
                 celular: {
+    $(document).ready(function() {
+        $('#formCliente').validate({
+            rules: {
+                    required: false
                     required: true
+                    required: false
+                documento: {
+                    required: false
                 },
+                    required: false
+                    required: true
+                    required: false
                 email: {
                     required: false
                 },
-                rua: {
                     required: false
+                    required: true
                 },
                 numero: {
-                    required: false
+                    required: true
                 },
                 bairro: {
-                    required: false
+                    required: true
                 },
                 cidade: {
-                    required: false
+                    required: true
                 },
                 estado: {
-                    required: false
+                    required: true
                 },
                 cep: {
-                    required: false
+                    required: true
                 }
             },
             messages: {
